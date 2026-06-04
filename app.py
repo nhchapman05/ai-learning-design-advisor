@@ -12,7 +12,7 @@ from langchain_classic.chains import RetrievalQA
 st.set_page_config(page_title="AI in Learning Design Advisor", page_icon="🧠")
 
 st.title("AI in Learning Design Advisor")
-st.markdown("*Know when to remove, scaffold, or protect friction in learning and how AI fits into each decision.*")
+st.markdown("*For learning practitioners: evidence-based guidance on friction in learning and the role AI can play.*").*")
 st.markdown("---")
 
 @st.cache_resource
