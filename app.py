@@ -15,6 +15,9 @@ st.title("AI in Learning Design Advisor")
 st.markdown("For learning practitioners: evidence-based guidance on friction in learning and the role of AI.")
 st.markdown("---")
 
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
 col1, col2 = st.columns([6,1])
 with col2:
     if st.button("Clear"):
@@ -147,11 +150,9 @@ def get_chain():
     return load_qa_chain()
 
 qa_chain = get_chain()
+
 if not st.session_state.messages:
     st.info("Ready. Ask your learning design question below.")
-
-if "messages" not in st.session_state:
-    st.session_state.messages = []
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
