@@ -184,12 +184,12 @@ if prompt := st.chat_input("What is your learning design question?"):
             result = qa_chain.invoke({"query": prompt})
         response = result["result"]
         st.markdown(response)
-       with st.expander("Source Documents"):
-    seen = set()
-    for doc in result["source_documents"]:
-        source = os.path.basename(doc.metadata.get('source', 'unknown'))
-        if source not in seen:
-            seen.add(source)
-            st.write(f"- {source}")
+        with st.expander("Source Documents"):
+            seen = set()
+            for doc in result["source_documents"]:
+                source = os.path.basename(doc.metadata.get('source', 'unknown'))
+                if source not in seen:
+                    seen.add(source)
+                    st.write(f"- {source}")
 
     st.session_state.messages.append({"role": "assistant", "content": response})
