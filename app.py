@@ -9,10 +9,10 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.prompts import PromptTemplate
 from langchain_classic.chains import RetrievalQA
 
-st.set_page_config(page_title="AI in Learning Design Advisor", page_icon="📚")
+st.set_page_config(page_title="AI in Learning Design Advisor", page_icon="🧠")
 
 st.title("AI in Learning Design Advisor")
-st.markdown("*Know when to remove, scaffold, or protect friction in learning -- and the appropriate role of AI in each.*")
+st.markdown("*Know when to remove, scaffold, or protect friction in learning and how AI fits into each decision.*")
 st.markdown("---")
 
 @st.cache_resource
@@ -20,8 +20,10 @@ def load_qa_chain():
     llm = ChatAnthropic(model="claude-haiku-4-5-20251001", temperature=0.3)
     embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
 
-    pdf_loader = DirectoryLoader(path="/content", glob="**/*.pdf", loader_cls=PyPDFLoader)
-    md_loader = TextLoader("/content/Three-Friction-Types-Framework-Natasha-Chapman.md")
+    data_path = os.path.join(os.path.dirname(__file__), "data")
+
+    pdf_loader = DirectoryLoader(path=data_path, glob="**/*.pdf", loader_cls=PyPDFLoader)
+    md_loader = TextLoader(os.path.join(data_path, "Three-Friction-Types-Framework-Natasha-Chapman.md"))
     documents = pdf_loader.load() + md_loader.load()
 
     splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
