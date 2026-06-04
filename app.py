@@ -12,22 +12,8 @@ from langchain_classic.chains import RetrievalQA
 st.set_page_config(page_title="AI in Learning Design Advisor", page_icon="🧠")
 
 st.title("AI in Learning Design Advisor")
-st.markdown("*For learning practitioners: evidence-based guidance on friction in learning and the role AI can play.*")
+st.markdown("For learning practitioners: evidence-based guidance on friction in learning and the role of AI.")
 st.markdown("---")
-
-col1, col2 = st.columns([6,1])
-with col2:
-    if st.button("Clear"):
-        st.session_state.messages = []
-        st.rerun()
-
-st.markdown("---")
-
-col1, col2 = st.columns([6,1])
-with col2:
-    if st.button("Clear"):
-        st.session_state.messages = []
-        st.rerun()
 
 col1, col2 = st.columns([6,1])
 with col2:
@@ -163,9 +149,6 @@ def get_chain():
 st.info("Loading knowledge base... this may take a minute on first load.")
 qa_chain = get_chain()
 st.success("Ready. Ask your question below.")
-if st.button("Clear conversation"):
-    st.session_state.messages = []
-    st.rerun()
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
