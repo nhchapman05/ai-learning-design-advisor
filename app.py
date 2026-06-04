@@ -15,6 +15,14 @@ st.title("AI in Learning Design Advisor")
 st.markdown("*For learning practitioners: evidence-based guidance on friction in learning and the role AI can play.*")
 st.markdown("---")
 
+st.markdown("---")
+
+col1, col2 = st.columns([6,1])
+with col2:
+    if st.button("Clear"):
+        st.session_state.messages = []
+        st.rerun()
+
 @st.cache_resource
 def load_qa_chain():
     llm = ChatAnthropic(model="claude-haiku-4-5-20251001", temperature=0.3)
@@ -143,6 +151,9 @@ def get_chain():
 st.info("Loading knowledge base... this may take a minute on first load.")
 qa_chain = get_chain()
 st.success("Ready. Ask your question below.")
+if st.button("Clear conversation"):
+    st.session_state.messages = []
+    st.rerun()
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -161,8 +172,12 @@ if prompt := st.chat_input("What is your learning design question?"):
             result = qa_chain.invoke({"query": prompt})
         response = result["result"]
         st.markdown(response)
-        with st.expander("Source Documents"):
-            for doc in result["source_documents"]:
-                st.write(f"- {doc.metadata.get('source', 'unknown')}")
+       with st.expander("Source Documents"):
+    seen = set()
+    for doc in result["source_documents"]:
+        source = os.path.basename(doc.metadata.get('source', 'unknown'))
+        if source not in seen:
+            seen.add(source)
+            st.write(f"- {source}")
 
     st.session_state.messages.append({"role": "assistant", "content": response})
