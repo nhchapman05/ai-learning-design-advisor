@@ -15,7 +15,19 @@ st.title("AI in Learning Design Advisor")
 st.markdown("*For learning practitioners: evidence-based guidance on friction in learning and the role AI can play.*")
 st.markdown("---")
 
+col1, col2 = st.columns([6,1])
+with col2:
+    if st.button("Clear"):
+        st.session_state.messages = []
+        st.rerun()
+
 st.markdown("---")
+
+col1, col2 = st.columns([6,1])
+with col2:
+    if st.button("Clear"):
+        st.session_state.messages = []
+        st.rerun()
 
 col1, col2 = st.columns([6,1])
 with col2:
