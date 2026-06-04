@@ -146,9 +146,9 @@ Do you know yet what those first-week tasks are, or is scoping the problem still
 def get_chain():
     return load_qa_chain()
 
-st.info("Loading knowledge base... this may take a minute on first load.")
 qa_chain = get_chain()
-st.success("Ready. Ask your question below.")
+if not st.session_state.messages:
+    st.info("Ready. Ask your learning design question below.")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
