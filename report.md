@@ -4,6 +4,16 @@ Building Agentic AI Applications for Beginners, Codecademy, 2026
 
 ---
 
+## Problem Statement
+
+Learning and training professionals are under growing pressure to integrate AI into their design practice — but the guidance available to them tends to come from two unhelpful places: vendor marketing that overstates what AI can do, and academic caution that undersells it. Neither helps a practitioner sitting with a real design problem trying to make a real decision.
+
+The result is that AI adoption in L&D tends to follow cost logic or trend logic rather than learning logic. Organizations automate training experiences because it's cheaper, not because it serves learners better. Practitioners avoid AI out of habit or principle and spend hours on work that doesn't require human judgment. Both failures share the same root cause: there is no principled, evidence-based way for a practitioner to ask "does AI belong here, and if so, doing what?"
+
+This tool exists to answer that question.
+
+---
+
 ## Overview
 
 The AI in Learning Design Advisor is a retrieval-augmented generation (RAG) chatbot designed for learning and training professionals. It helps practitioners reason about their design decisions -- specifically, how and where AI belongs in a given learning context.
