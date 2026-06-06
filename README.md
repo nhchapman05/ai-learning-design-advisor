@@ -135,4 +135,4 @@ The knowledge base loads and indexes on first run. Subsequent loads use Streamli
 
 Built by **Natasha Chapman, PhD** -- Learning Experience Designer with 20 years of practice across higher education, leadership development, and corporate L&D. Founder of Lit Learning LLC.
 
-This project is the first working layer of a larger product: a practitioner-facing diagnostic tool that helps learning teams reason about where AI belongs in their design process -- and where it doesn't.
+This project is the first working layer of a larger product: a practitioner-facing diagnostic tool that helps learning teams reason about where AI belongs in their design process.
