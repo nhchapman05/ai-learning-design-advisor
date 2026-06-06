@@ -6,7 +6,7 @@ Building Agentic AI Applications for Beginners, Codecademy, 2026
 
 ## Overview
 
-The AI in Learning Design Advisor is a retrieval-augmented generation (RAG) chatbot designed for learning and training professionals. It helps practitioners reason about their design decisions -- specifically, whether and how AI belongs in a given learning context.
+The AI in Learning Design Advisor is a retrieval-augmented generation (RAG) chatbot designed for learning and training professionals. It helps practitioners reason about their design decisions -- specifically, how and where AI belongs in a given learning context.
 
 The tool is grounded in two sources of knowledge: a curated set of learning science research and practitioner frameworks and a proprietary diagnostic framework, the Three Friction Types Framework (Chapman, 2026). That combination is what distinguishes it from a general-purpose AI assistant. A practitioner asking the same question to ChatGPT gets advice drawn from everything; this advisor draws from a specific, bounded knowledge base and applies a practitioner-developed lens to the response.
 

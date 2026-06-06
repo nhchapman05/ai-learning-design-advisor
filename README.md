@@ -2,7 +2,7 @@
 
 **For learning practitioners: evidence-based guidance on friction in learning and the role of AI.**
 
-A RAG-based conversational advisor that helps instructional designers, L&D practitioners, facilitators, teachers, and faculty reason clearly about their design decisions -- and whether AI belongs in them.
+A RAG-based conversational advisor that helps instructional designers, L&D practitioners, facilitators, teachers, and faculty reason clearly about their design decisions -- and where AI belongs in them.
 
 Built as Assignment 1 for *Building Agentic AI Applications for Beginners*, Codecademy, 2026.
 
@@ -23,7 +23,7 @@ Two practitioner scenarios: a manager training redesign with a sensitive coachin
 The advisor takes a practitioner's question or learning problem and responds with:
 
 - A grounded diagnosis of what kind of challenge it actually is
-- A clear recommendation on whether and how AI fits
+- A clear recommendation on how and where AI fits
 - Evidence drawn from learning science research and practitioner frameworks
 
 The diagnostic layer is built on the **Three Friction Types Framework** (Chapman, 2026), which distinguishes between overhead that should be removed, complexity that should be scaffolded, and cognitive work that should be protected. The agent uses this framework to reason about each question, not to label it, but to shape the recommendation.
