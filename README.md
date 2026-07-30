@@ -12,7 +12,7 @@ Built as Assignment 1 for *Building Agentic AI Applications for Beginners*, Code
 
 ## Demo
 
-📹 [Watch the demo](https://drive.google.com/file/d/1DA9PYYuDUWZo_Z1IhWqeJUGBbOStjy_P/view?usp=sharing)
+📹 [Watch the demo](https://drive.google.com/file/d/1edtZoaC4Tz_tWxbp49p2D4PA69y-_dwN/view?usp=sharing)
 
 Two practitioner scenarios: a manager training redesign with a sensitive coaching component, and a faculty instructor thinking proactively about AI use in student reflection papers.
 
